@@ -1,4 +1,45 @@
-# Getting Started with Create React App
+# User Stories
+
+```
+As a user, I can enter a title for the storyboard
+```
+```
+As a user, I can add a new scene to the storyboard
+```
+```
+As a user, I can add a title to a scene
+```
+```
+As a user, I can add pictures to a scene
+```
+```
+As a user, I can add a description to a scene
+```
+```
+As a user, I can add a tags to a scene
+```
+```
+As a user, I can edit the title
+```
+```
+As a user, I can edit the description
+```
+```
+As a user, I can delete tags
+```
+```
+As a user, I can delete a scene
+```
+
+
+
+
+
+
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
