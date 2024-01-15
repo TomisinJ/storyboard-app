@@ -25,3 +25,9 @@
 .datetime {
   padding-right: 90px;
 }
+
+.storyboard_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* background-color: pink; */
+}

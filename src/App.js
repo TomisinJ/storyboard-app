@@ -17,7 +17,12 @@ function App() {
       </div>
 
 
-      <div>
+      <div className='storyboard_grid'>
+        <Scene/>
+        <Scene/>
+        <Scene/>
+        <Scene/>
+        <Scene/>
         <Scene/>
       </div>
     </div>

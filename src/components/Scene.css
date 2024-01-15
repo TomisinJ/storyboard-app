@@ -1,0 +1,52 @@
+.scene {
+    /* border: 3px solid darkgray; */
+    display: inline-block;
+    align-items: center;
+    margin: 0;
+    padding: 9%;
+    /* padding: 10px; */
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="text"]:focus {
+    background-color: yellow;
+}
+
+.scene_title {
+    border: none;
+    border-bottom: 2px solid gray;
+    width: 100%;
+}
+
+.custom_file_upload {
+    display: inline-block;
+    background-color: rgb(210, 210, 210);
+    border: 1px dashed darkgray;
+    border-radius: 10px;
+    height: 100px;
+    width: 100%;
+}
+
+.scene_description {
+    /* border: 2px solid gray; */
+    border-radius: 10px;
+    width: 100%;
+    height: 80px;
+    resize: none;
+}
+
+textarea:focus {
+    background-color: yellow;
+}
+
+.tags {
+    display: flex;
+}
+
+.tags > p {
+    margin: 0;
+    padding: 2px;
+}
