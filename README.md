@@ -3,41 +3,50 @@
 ```
 As a user, I can enter a title for the storyboard
 ```
+
 ```
 As a user, I can add a new scene to the storyboard
 ```
+
 ```
 As a user, I can add a title to a scene
 ```
+
 ```
 As a user, I can add pictures to a scene
 ```
+
 ```
 As a user, I can add a description to a scene
 ```
+
 ```
 As a user, I can add a tags to a scene
 ```
+
 ```
 As a user, I can edit the title
 ```
+
 ```
 As a user, I can edit the description
 ```
+
 ```
 As a user, I can delete tags
 ```
+
 ```
 As a user, I can delete a scene
 ```
 
+Process:
 
-
-
-
-
-
-
+1. Creating the Data array - all the scenes we want to start out with
+   - Consideration - do i want to edit a form and leave the results of the form visible, or do i want to
+     have a template form to fill out, and create new scenes that can be edited later?
+   - Creating a new item and refreshing the page doesnt save the results in either of these situations
+   - One needs to save the data, and later on save it to a database
 
 ## Getting Started with Create React App
 

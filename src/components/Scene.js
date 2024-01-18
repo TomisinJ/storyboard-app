@@ -1,12 +1,18 @@
 import './Scene.css';
 import React from 'react'
 
-function Scene() {
+
+/*
+Two templates a needed: one for editing, one for displaying
+Then an if statement to return each option
+*/
+
+function Scene(props) {
   return (
     <div className='scene'>
       <input type='text' id='scene_title' className='scene_title'/>
       <label className='custom_file_upload'>
-        <input type='file' accept='image/png, image/jpeg, image/jpg' id='scene_input' className='file_upload_input'/>
+        <input type='file' accept='image/png, image/jpeg, image/jpg' id={props.id} className='file_upload_input'/>
         Upload your images
       </label>
       <div>

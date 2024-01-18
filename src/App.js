@@ -1,8 +1,16 @@
 import './App.css';
 import Scene from './components/Scene';
+import { useState } from 'react';
 
 function App() {
   
+  [scenes, addScenes] = useState(/* all the scenes from data */)
+
+  const sceneList = scenes.map((scene) => (
+    <Scene/>
+  ));
+
+
   return (
     <div className="App">
 
@@ -16,8 +24,8 @@ function App() {
         </div>
       </div>
 
-
       <div className='storyboard_grid'>
+
         <Scene/>
         <Scene/>
         <Scene/>
