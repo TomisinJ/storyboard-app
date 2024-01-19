@@ -4,11 +4,11 @@ import { useState } from 'react';
 
 function App() {
   
-  [scenes, addScenes] = useState(/* all the scenes from data */)
+  // [scenes, addScenes] = useState(/* all the scenes from data */)
 
-  const sceneList = scenes.map((scene) => (
-    <Scene/>
-  ));
+  // const sceneList = scenes.map((scene) => (
+  //   <Scene/>
+  // ));
 
 
   return (
