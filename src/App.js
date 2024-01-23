@@ -2,14 +2,19 @@ import './App.css';
 import Scene from './components/Scene';
 import { useState } from 'react';
 
-function App() {
+function App(props) {
   
-  // [scenes, addScenes] = useState(/* all the scenes from data */)
+  const [scenes, setScenes] = useState(props.scenes /* all the scenes from data */)
 
   // const sceneList = scenes.map((scene) => (
   //   <Scene/>
   // ));
 
+  const allScenes = scenes.map(
+    (scene) => (
+      <Scene/>
+    )
+  )
 
   return (
     <div className="App">
@@ -25,13 +30,7 @@ function App() {
       </div>
 
       <div className='storyboard_grid'>
-
-        <Scene/>
-        <Scene/>
-        <Scene/>
-        <Scene/>
-        <Scene/>
-        <Scene/>
+        {allScenes}
       </div>
     </div>
   );

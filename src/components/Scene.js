@@ -23,6 +23,10 @@ we want the state to change when the submit button is pressed
 so, a function needs to be handles when submit is pressed > which changes the state
 */
 
+/**
+- Next - present input from a form in a tag
+ */
+
 function Scene() {
 
 const [isEditing, setEditing] = useState(true);

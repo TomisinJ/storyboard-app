@@ -15,13 +15,14 @@ const DATA = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App scenes={DATA} />
   </React.StrictMode>
 );
 
 
 /*
-index - App
+Before anything, so that this data array can be used,
+ we need to assign it to the Apps props - create a prop for it to be represented as.
 */
 
 // If you want to start measuring performance in your app, pass a function
