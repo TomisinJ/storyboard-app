@@ -4,17 +4,13 @@ import { useState } from 'react';
 
 function App(props) {
   
-  const [scenes, setScenes] = useState(props.scenes /* all the scenes from data */)
-
-  // const sceneList = scenes.map((scene) => (
-  //   <Scene/>
-  // ));
+  const [scenes, setScenes] = useState(props.scenes /* all the scenes from data */);
 
   const allScenes = scenes.map(
     (scene) => (
       <Scene/>
     )
-  )
+  );
 
   return (
     <div className="App">
