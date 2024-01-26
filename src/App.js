@@ -1,5 +1,6 @@
 import './App.css';
 import Scene from './components/Scene';
+import Form from './components/Form';
 import { useState } from 'react';
 
 function App(props) {
@@ -26,7 +27,8 @@ function App(props) {
       </div>
 
       <div className='storyboard_grid'>
-        {allScenes}
+        <Form/>
+        {/* {allScenes} */}
       </div>
     </div>
   );
