@@ -4,6 +4,10 @@ import Form from './components/Form';
 import { useState } from 'react';
 
 function App(props) {
+
+  function addScene(title) {
+    const newScene = {id: "scene-id", title: title, description: "this is scene 4"};
+  }
   
   const [scenes, setScenes] = useState(props.scenes /* all the scenes from data */);
 
@@ -27,11 +31,17 @@ function App(props) {
       </div>
 
       <div className='storyboard_grid'>
-        <Form/>
-        {/* {allScenes} */}
+        <Form addScene={addScene}/>
+        {allScenes}
       </div>
     </div>
   );
 }
 
 export default App;
+
+/*
+
+passing a function as a prop is basically saying "I want to use this function here
+
+*/

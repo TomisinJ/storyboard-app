@@ -13,11 +13,21 @@ This for is the template for creating a new scene
 - 
 */
 
-function Form() {
+/*
+Form submission is done via callbacks
+
+*/
+
+function Form(props) {
     const [name, setName] = useState("");
 
     function valueChange(e) {
         setName(e.target.value);
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        props.addScene("name!");
     }
 
   return (
