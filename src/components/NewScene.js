@@ -1,3 +1,4 @@
+import './Scene.css';
 import React, { useState } from 'react';
 import {createScene} from './../createScene'
 
