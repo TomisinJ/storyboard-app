@@ -13,9 +13,14 @@ onChange={(e) => onChange(e)}
 function NewScene(props) {
     const [sceneTitle, setSceneTitle] = useState(props.sceneTitle);
     const [sceneDescription, setSceneDescription] = useState(props.sceneDescription);
+    const [isEditing, setEditing] = useState(true);
 
-  return (
-    <div className='scene'>
+    function handleClick() {
+        setEditing(false);
+    }
+
+    const editingScene = (
+        <div className='scene'>
         {/* <ModifiableAndNonModifiableTextField title={sceneTitle} isEditable={false} onChange={(e) => setSceneTitle(e.currentTarget.value)} /> This is broken */}
     <input
     type='text'
@@ -38,12 +43,33 @@ function NewScene(props) {
          />
     </div>
     <div>
-        <button>Save</button>
+        <button onClick={() => {handleClick()}}>Save</button>
         {/* <button onClick={() => props.addScene(createScene('', ''))}>Save</button> */}
 
     </div>
     </div>
-   )
+    )
+
+    const newScene = (
+        <div className='scene'>
+        {/* <ModifiableAndNonModifiableTextField title={sceneTitle} isEditable={false} onChange={(e) => setSceneTitle(e.currentTarget.value)} /> This is broken */}
+        <p>{sceneTitle}</p>
+    <label className='custom_file_upload'>
+        <input type='file' accept='image/png, image/jpeg, image/jpg' className='file_upload_input'/>
+        Upload your images
+    </label>
+    <div>
+    <p>{sceneDescription}</p>
+    </div>
+    <div>
+        <button onClick={() => {handleClick()}}>Edit</button>
+        {/* <button onClick={() => props.addScene(createScene('', ''))}>Save</button> */}
+
+    </div>
+    </div>
+    )
+
+  return isEditing ? editingScene : newScene
 }
 
 export default NewScene
