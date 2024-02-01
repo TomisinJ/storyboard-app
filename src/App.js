@@ -1,19 +1,22 @@
 import './App.css';
-import Scene from './components/Scene';
+import NewScene from './components/NewScene';
+import BlankScene from './components/BlankScene';
 import Form from './components/Form';
 import { useState } from 'react';
 
+
+
 function App(props) {
 
-  function addScene(title) {
-    const newScene = {id: "scene-id", title: title, description: "this is scene 4"};
+  function addScene(scene) {
+    setScenes([...scenes, scene])
   }
   
-  const [scenes, setScenes] = useState(props.scenes /* all the scenes from data */);
+  const [scenes, setScenes] = useState([{title:'test', description: 'test description'}]);
 
   const allScenes = scenes.map(
-    (scene) => (
-      <Scene/>
+    ({title, description}) => (
+      <NewScene addScene={addScene} sceneTitle={title} sceneDescription={description}/>
     )
   );
 
@@ -31,8 +34,8 @@ function App(props) {
       </div>
 
       <div className='storyboard_grid'>
-        <Form addScene={addScene}/>
         {allScenes}
+        <BlankScene />
       </div>
     </div>
   );
