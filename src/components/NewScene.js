@@ -19,6 +19,10 @@ function NewScene(props) {
         setEditing(false);
     }
 
+    function handleEdit() {
+        setEditing(true);
+    }
+
     const editingScene = (
         <div className='scene'>
         {/* <ModifiableAndNonModifiableTextField title={sceneTitle} isEditable={false} onChange={(e) => setSceneTitle(e.currentTarget.value)} /> This is broken */}
@@ -62,9 +66,8 @@ function NewScene(props) {
     <p>{sceneDescription}</p>
     </div>
     <div>
-        <button onClick={() => {handleClick()}}>Edit</button>
+        <button onClick={() => {handleEdit()}}>Edit</button>
         {/* <button onClick={() => props.addScene(createScene('', ''))}>Save</button> */}
-
     </div>
     </div>
     )
