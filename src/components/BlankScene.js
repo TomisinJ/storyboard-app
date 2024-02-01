@@ -3,10 +3,10 @@ import {createScene} from '../createScene'
 
 function BlankScene(props) {
   return (
-    <div className='scene'>
+    <div className="text-3xl font-bold underline">
         Create Scene
     <div>
-    <button>Create Scene</button>
+    <button onClick={() => props.addScene(createScene('', ''))}>+</button>
     </div>
     </div>
    )

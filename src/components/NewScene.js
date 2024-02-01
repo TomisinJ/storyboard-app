@@ -37,7 +37,7 @@ function NewScene(props) {
          />
     </div>
     <div>
-        <button onClick={() => props.addScene(createScene('', ''))}>Add Scene</button>
+        <button onClick={() => props.addScene(createScene('', ''))}>Save</button>
     </div>
     </div>
    )

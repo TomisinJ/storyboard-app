@@ -35,7 +35,7 @@ function App(props) {
 
       <div className='storyboard_grid'>
         {allScenes}
-        <BlankScene />
+        <BlankScene addScene={addScene}/>
       </div>
     </div>
   );
