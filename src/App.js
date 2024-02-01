@@ -12,7 +12,7 @@ function App(props) {
     setScenes([...scenes, scene])
   }
   
-  const [scenes, setScenes] = useState([{title:'test', description: 'test description'}]);
+  const [scenes, setScenes] = useState([{title:'type here...', description: 'type here...'}]);
 
   const allScenes = scenes.map(
     ({title, description}) => (

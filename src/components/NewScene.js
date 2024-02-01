@@ -15,14 +15,14 @@ function NewScene(props) {
 
   return (
     <div className='scene'>
-        <ModifiableAndNonModifiableTextField title={sceneTitle} isEditable={false} onChange={(e) => setSceneTitle(e.currentTarget.value)} /> This is broken
-    {/* <input
+        {/* <ModifiableAndNonModifiableTextField title={sceneTitle} isEditable={false} onChange={(e) => setSceneTitle(e.currentTarget.value)} /> This is broken */}
+    <input
     type='text'
     id='scene_title'
     className='scene_title'
     value={sceneTitle}
     onChange={(e) => setSceneTitle(e.currentTarget.value)}
-    /> */}
+    />
     <label className='custom_file_upload'>
         <input type='file' accept='image/png, image/jpeg, image/jpg' className='file_upload_input'/>
         Upload your images
