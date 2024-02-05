@@ -2,13 +2,13 @@ import './Scene.css';
 import React, { useState } from 'react';
 import {createScene} from './../createScene'
 
-const ModifiableAndNonModifiableTextField = (text, isEditable, onChange, id, type = 'text') => isEditable ?  <input
-type={type}
-id={id}
-className='scene_title'
-value={text}
-onChange={(e) => onChange(e)}
-/> : <div>{text}</div>
+// const ModifiableAndNonModifiableTextField = (text, isEditable, onChange, id, type = 'text') => isEditable ?  <input
+// type={type}
+// id={id}
+// className='scene_title'
+// value={text}
+// onChange={(e) => onChange(e)}
+// /> : <div>{text}</div>
 
 function NewScene(props) {
     const [sceneTitle, setSceneTitle] = useState(props.sceneTitle);
@@ -76,9 +76,6 @@ function NewScene(props) {
 }
 
 export default NewScene
-
-
-
 
 // Parent is saying to child - you can use this - its given as a prop
 // passing down to children
