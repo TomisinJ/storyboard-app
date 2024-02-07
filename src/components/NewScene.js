@@ -2,15 +2,12 @@ import './Scene.css';
 import React, { useState } from 'react';
 import {createScene} from './../createScene'
 
-// const ModifiableAndNonModifiableTextField = (text, isEditable, onChange, id, type = 'text') => isEditable ?  <input
-// type={type}
-// id={id}
-// className='scene_title'
-// value={text}
-// onChange={(e) => onChange(e)}
-// /> : <div>{text}</div>
 
 function NewScene(props) {
+
+    const key = document.getElementById('key');
+    const value = document.getElementById('value');
+    
     const [sceneTitle, setSceneTitle] = useState(props.sceneTitle);
     const [sceneDescription, setSceneDescription] = useState(props.sceneDescription);
     const [isEditing, setEditing] = useState(true);
@@ -25,10 +22,9 @@ function NewScene(props) {
 
     const editingScene = (
         <div className='scene'>
-        {/* <ModifiableAndNonModifiableTextField title={sceneTitle} isEditable={false} onChange={(e) => setSceneTitle(e.currentTarget.value)} /> This is broken */}
     <input
     type='text'
-    id='scene_title'
+    id='key'
     className='scene_title'
     value={sceneTitle}
     onChange={(e) => setSceneTitle(e.currentTarget.value)}
@@ -40,15 +36,14 @@ function NewScene(props) {
     <div>
         <textarea 
         type='text'
-         id='scene_description' 
+         id='value' 
          className='scene_description' 
          value={sceneDescription}
          onChange={(e) => setSceneDescription(e.currentTarget.value)}
          />
     </div>
     <div>
-        <button onClick={() => {handleClick()}}>Save</button>
-        {/* <button onClick={() => props.addScene(createScene('', ''))}>Save</button> */}
+        <button id="add" onClick={() => {handleClick()}}>Save</button>
 
     </div>
     </div>
@@ -56,7 +51,6 @@ function NewScene(props) {
 
     const newScene = (
         <div className='scene'>
-        {/* <ModifiableAndNonModifiableTextField title={sceneTitle} isEditable={false} onChange={(e) => setSceneTitle(e.currentTarget.value)} /> This is broken */}
         <p>{sceneTitle}</p>
     <label className='custom_file_upload'>
         <input type='file' accept='image/png, image/jpeg, image/jpg' className='file_upload_input'/>
@@ -67,7 +61,6 @@ function NewScene(props) {
     </div>
     <div>
         <button onClick={() => {handleEdit()}}>Edit</button>
-        {/* <button onClick={() => props.addScene(createScene('', ''))}>Save</button> */}
     </div>
     </div>
     )
@@ -76,7 +69,3 @@ function NewScene(props) {
 }
 
 export default NewScene
-
-// Parent is saying to child - you can use this - its given as a prop
-// passing down to children
-// if you want it to be mutable , you want it to be rendered in something conditonal(input instead of div)

@@ -1,10 +1,7 @@
 import './App.css';
 import NewScene from './components/NewScene';
 import BlankScene from './components/BlankScene';
-import Form from './components/Form';
 import { useState } from 'react';
-
-
 
 function App(props) {
 
@@ -42,9 +39,3 @@ function App(props) {
 }
 
 export default App;
-
-/*
-
-passing a function as a prop is basically saying "I want to use this function here
-
-*/

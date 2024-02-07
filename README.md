@@ -40,14 +40,6 @@ As a user, I can delete tags
 As a user, I can delete a scene
 ```
 
-Process:
-
-1. Creating the Data array - all the scenes we want to start out with
-   - Consideration - do i want to edit a form and leave the results of the form visible, or do i want to
-     have a template form to fill out, and create new scenes that can be edited later?
-   - Creating a new item and refreshing the page doesnt save the results in either of these situations
-   - One needs to save the data, and later on save it to a database
-
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
