@@ -1,4 +1,4 @@
-import './App.css';
+import './input.css';
 import NewScene from './components/NewScene';
 import BlankScene from './components/BlankScene';
 import { useState } from 'react';
@@ -20,8 +20,27 @@ function App(props) {
   return (
     <div className="App">
 
-      <div className='user_info'>
-        <header className="header">
+
+      
+
+      <div className='flex items-center justify-between bg-yellow-200'>
+
+      {/* .user_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fbff00;
+} */}
+
+        <header className="flex flex-col justify-left p-1">
+
+        {/* .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 10px;
+} */}
+
           <p>Tomi's Storymood</p>
           <h1>The Crochet Chronicles - Series 1 Episode 3</h1>
         </header>

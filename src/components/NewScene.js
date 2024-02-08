@@ -1,13 +1,11 @@
-import './Scene.css';
+import '../input.css';
 import React, { useState } from 'react';
-import {createScene} from './../createScene'
+import {createScene} from './../createScene';
+import './NewScene.css';
 
 
 function NewScene(props) {
 
-    const key = document.getElementById('key');
-    const value = document.getElementById('value');
-    
     const [sceneTitle, setSceneTitle] = useState(props.sceneTitle);
     const [sceneDescription, setSceneDescription] = useState(props.sceneDescription);
     const [isEditing, setEditing] = useState(true);
@@ -21,31 +19,31 @@ function NewScene(props) {
     }
 
     const editingScene = (
-        <div className='scene'>
-    <input
-    type='text'
-    id='key'
-    className='scene_title'
-    value={sceneTitle}
-    onChange={(e) => setSceneTitle(e.currentTarget.value)}
-    />
-    <label className='custom_file_upload'>
-        <input type='file' accept='image/png, image/jpeg, image/jpg' className='file_upload_input'/>
-        Upload your images
-    </label>
-    <div>
-        <textarea 
+    <div className= 'bg-gray-200 inline-block items-center m-0 p-2'>
+        <input
         type='text'
-         id='value' 
-         className='scene_description' 
-         value={sceneDescription}
-         onChange={(e) => setSceneDescription(e.currentTarget.value)}
-         />
-    </div>
-    <div>
-        <button id="add" onClick={() => {handleClick()}}>Save</button>
-
-    </div>
+        id='key'
+        className='border-gray-500 border-b-2 m-2 w-full'
+        value={sceneTitle}
+        onChange={(e) => setSceneTitle(e.currentTarget.value)}
+        />
+        <label className='custom_file_upload'>
+            <input type='file' accept='image/png, image/jpeg, image/jpg' className='file_upload_input'/>
+            Upload your images
+        </label>
+        <div>
+            <textarea 
+            type='text'
+            id='value' 
+            className='scene_description' 
+            value={sceneDescription}
+            onChange={(e) => setSceneDescription(e.currentTarget.value)}
+            />
+        </div>
+        <label className="switch">
+            <input type="checkbox" onClick={() => {handleClick()}}></input>
+            <span className="slider round"></span>
+        </label>
     </div>
     )
 
