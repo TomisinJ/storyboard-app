@@ -1,6 +1,6 @@
 import './input.css';
-import NewScene from './components/NewScene';
 import BlankScene from './components/BlankScene';
+import NewScene from './components/NewScene';
 import { useState } from 'react';
 
 function App(props) {
@@ -18,42 +18,24 @@ function App(props) {
   );
 
   return (
-    <div className="App">
-
-
-      
-
-      <div className='flex items-center justify-between bg-yellow-200'>
-
-      {/* .user_info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #fbff00;
-} */}
-
+    <div>
+      <div className='flex items-center justify-between bg-lime-400 p-4'>
         <header className="flex flex-col justify-left p-1">
-
-        {/* .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  padding: 10px;
-} */}
-
-          <p>Tomi's Storymood</p>
-          <h1>The Crochet Chronicles - Series 1 Episode 3</h1>
+          <p className='font-normal'>Tomi's Storymood</p>
+          <h1 className='font-bold'>The Crochet Chronicles - Series 1 Episode 3</h1>
         </header>
-        <div className='datetime'>
+        <div className='font-normal pr-2'>
           <p>01/01/2024</p>
         </div>
       </div>
 
-      <div className='storyboard_grid'>
+      <div className='grid grid-cols-4'>
         {allScenes}
-        <BlankScene addScene={addScene}/>
+        <div className='m-5'>
+          <BlankScene addScene={addScene}/>
+        </div>
       </div>
-    </div>
+      </div>
   );
 }
 

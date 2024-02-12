@@ -19,7 +19,7 @@ function NewScene(props) {
     }
 
     const editingScene = (
-    <div className= 'bg-gray-200 inline-block items-center m-0 p-2'>
+    <div className= 'bg-slate-300 m-5 rounded-md inline-block items-center p-2'>
         <input
         type='text'
         id='key'
@@ -48,7 +48,7 @@ function NewScene(props) {
     )
 
     const newScene = (
-        <div className='scene'>
+        <div className='bg-slate-50 rounded'>
         <p>{sceneTitle}</p>
     <label className='custom_file_upload'>
         <input type='file' accept='image/png, image/jpeg, image/jpg' className='file_upload_input'/>
