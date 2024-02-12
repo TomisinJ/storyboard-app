@@ -9,7 +9,7 @@ function App(props) {
     setScenes([...scenes, scene])
   }
   
-  const [scenes, setScenes] = useState([{title:'type here...', description: 'type here...'}]);
+  const [scenes, setScenes] = useState([{title:'TITLE...', description: 'DESCRIPTION...'}]);
 
   const allScenes = scenes.map(
     ({title, description}) => (
@@ -31,7 +31,7 @@ function App(props) {
 
       <div className='grid grid-cols-4'>
         {allScenes}
-        <div className='m-5'>
+        <div>
           <BlankScene addScene={addScene}/>
         </div>
       </div>
