@@ -19,7 +19,7 @@ function NewScene(props) {
     }
 
     const editingScene = (
-    <div className=  'bg-slate-300 m-5 rounded-md inline-grid p-2 gap-2'>
+    <div className= 'bg-slate-300 m-5 rounded-md inline-grid p-2 gap-2'>
         <input
         type='text'
         id='key'
@@ -58,19 +58,23 @@ function NewScene(props) {
     )
 
     const newScene = (
-        <div className='bg-slate-50 rounded'>
-        <p>{sceneTitle}</p>
-    <label className='custom_file_upload'>
-        <input type='file' accept='image/png, image/jpeg, image/jpg' className='file_upload_input'/>
-        Upload your images
-    </label>
-    <div>
-    <p>{sceneDescription}</p>
-    </div>
-    <div>
-        <button onClick={() => {handleEdit()}}>Edit</button>
-    </div>
-    </div>
+        <div className='bg-slate-50 m-5 border-2 rounded-md inline-grid p-2 gap-2'>
+            <p className='text-center bg-slate-100 rounded-md w-full p-1 text-xs font-bold'>
+                {sceneTitle}
+            </p>
+            <img className='h-40'>
+            </img>
+            <div>
+                <p className='text-center bg-slate-100 rounded-md w-full p-1 h-32 text-xs font-bold'>
+                    {sceneDescription}
+                </p>
+            </div>
+            <div>
+                <button className='w-full text-xs font-bold bg-slate-100 rounded-md h-6' onClick={() => {handleEdit()}}>
+                    EDIT
+                </button>
+            </div>
+        </div>
     )
 
   return isEditing ? editingScene : newScene

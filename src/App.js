@@ -29,13 +29,13 @@ function App(props) {
         </div>
       </div>
 
-      <div className='grid grid-cols-4'>
+      <div className='grid grid-cols-4 m-2'>
         {allScenes}
         <div>
           <BlankScene addScene={addScene}/>
         </div>
       </div>
-      </div>
+    </div>
   );
 }
 
