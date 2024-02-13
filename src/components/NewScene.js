@@ -1,6 +1,7 @@
 import '../input.css';
 import React, { useState } from 'react';
 import {createScene} from './../createScene';
+import UploadAndPresentImage from '../UploadAndPresentImage';
 
 
 function NewScene(props) {
@@ -26,13 +27,7 @@ function NewScene(props) {
         value={sceneTitle}
         onChange={(e) => setSceneTitle(e.currentTarget.value)}
         />
-        <label className='text-center  h-40 bg-slate-100 rounded-md p-1 text-xs font-bold border-dashed border-2 border-slate-300'>
-            <input className='hidden'
-            type='file' 
-            accept='image/png, image/jpeg, image/jpg' 
-            />
-            UPLOAD YOUR IMAGES
-        </label>
+        <UploadAndPresentImage/>
         <div>
             <input 
             type='text'
@@ -44,10 +39,10 @@ function NewScene(props) {
         </div>
 
         <div className='flex justify-evenly gap-2'>
-            <button className='w-full text-xs font-bold bg-slate-100 rounded-md h-6 focus:bg-slate-400' onClick={() => {handleClick()}}>
+            <button className='w-full text-xs font-bold bg-slate-100 rounded-md h-6 focus:bg-slate-400 focus:text-slate-50' onClick={() => {handleClick()}}>
                 SAVE
             </button>
-             <button className='w-full text-xs font-bold bg-slate-100 rounded-md h-6 focus:bg-slate-400' onClick={() => {handleClick()}}>
+             <button className='w-full text-xs font-bold bg-slate-100 rounded-md h-6 focus:bg-slate-400 focus:text-slate-50' onClick={() => {handleClick()}}>
                 DELETE
             </button>
 
