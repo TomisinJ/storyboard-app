@@ -1,7 +1,6 @@
 import '../input.css';
 import React, { useState } from 'react';
 import {createScene} from './../createScene';
-import './NewScene.css';
 
 
 function NewScene(props) {
@@ -19,7 +18,7 @@ function NewScene(props) {
     }
 
     const editingScene = (
-    <div className= 'bg-slate-300 m-5 rounded-md inline-grid p-2 gap-2'>
+    <div className= 'bg-slate-300 text-slate-400 m-5 rounded-md inline-grid p-2 gap-2'>
         <input
         type='text'
         id='key'
@@ -27,7 +26,7 @@ function NewScene(props) {
         value={sceneTitle}
         onChange={(e) => setSceneTitle(e.currentTarget.value)}
         />
-        <label className='text-center h-40 bg-slate-100 rounded-md p-1 text-xs font-bold border-dashed border-2 border-slate-300'>
+        <label className='text-center  h-40 bg-slate-100 rounded-md p-1 text-xs font-bold border-dashed border-2 border-slate-300'>
             <input className='hidden'
             type='file' 
             accept='image/png, image/jpeg, image/jpg' 
