@@ -2,6 +2,7 @@ import './input.css';
 import BlankScene from './components/BlankScene';
 import NewScene from './components/NewScene';
 import { useState } from 'react';
+import Form from './components/Form';
 
 function App(props) {
 
@@ -33,6 +34,7 @@ function App(props) {
         {allScenes}
         <div>
           <BlankScene addScene={addScene}/>
+          <Form/>
         </div>
       </div>
     </div>

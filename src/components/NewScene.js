@@ -56,8 +56,8 @@ function NewScene(props) {
             <p className='text-center bg-slate-100 rounded-md w-full p-1 text-xs font-bold'>
                 {sceneTitle}
             </p>
-            <img className='h-40'>
-            </img>
+            <UploadAndPresentImage/>
+            {/* sort this out */}
             <div>
                 <p className='text-center bg-slate-100 rounded-md w-full p-1 h-32 text-xs font-bold'>
                     {sceneDescription}
